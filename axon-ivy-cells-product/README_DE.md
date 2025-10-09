@@ -1,14 +1,14 @@
-<!--
-Dear developer !     
+# Axon Ivy Cells
+*(formerly Docfactory Cells)*
 
-When you create your very valuable documentation, please be aware that this  is not only published on github. With this file we provide a German translation of the description-tab, i.e. https://market.axonivy.com/adobe-acrobat-connector#tab-description. Please contact us if you need support with the German translation.
--->
+**Axon Ivy Cells** is a lightweight utility that simplifies SpreadSheet processing tasks inside the Axon Ivy Platform. It builds on the embedded Aspose.Cells Java library and provides ready-to-use building blocks for common SpreadSheet operations.
 
-# MEIN-PRODUKT-NAME
+### Key Features
+- **Effortless license setup** – Load and configure the Aspose license via the `CellFactory` with minimal overhead.
+- **Reusable components** – Predefined runnable and consumable methods accelerate development and ensure consistency.
+- **Lightweight and extendable** – Small footprint, easy to install, integrate, and adapt to your project’s needs.
 
-Bitte übersetze mindestens das "Description"-Chapter aus https://github.com/axonivy-market/market-product/blob/master/axon-ivy-cells-product/README.md. Es wird auf unserer Homepage angezeigt.
-Falls Du darüber hinaus auch die anderen Chapter übersetzt, werden auch diese auf der Homepage auf Deutsch angezeigt.
+## Setup
+Make sure the Aspose license is loaded through the `CellFactory` class before processing any document.
 
-<!--
-Die Erläuterungen unter „MEIN-PRODUKT-NAME“ werden z.B. für den  Adobe Konnektor hier angezeigt: https://market.axonivy.com/adobe-acrobat-connector#tab-description wenn ein Nutzer Deutsch als Anzeigesprache ausgewählt hat.
--->
+![load license](images/load-license.png)

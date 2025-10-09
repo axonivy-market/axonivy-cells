@@ -1,32 +1,14 @@
-<!--
-Dear developer!     
+# Axon Ivy Cells
+*(formerly Docfactory Cells)*
 
-When you create your very valuable documentation, please be aware that this Readme.md is not only published on github. This documentation is also processed automatically and published on our website. For this to work, the two headings "Demo" and "Setup" must not be changed. Do also not change the order of the headings. Feel free to add sub-sections wherever you want.
--->
+**Axon Ivy Cells** is a lightweight utility that simplifies SpreadSheet processing tasks inside the Axon Ivy Platform. It builds on the embedded Aspose.Cells Java library and provides ready-to-use building blocks for common SpreadSheet operations.
 
-# axon.ivy.cells Connector
-
-YOUR DESCRIPTION GOES HERE: Please just give a short description here without further headings.
-
-<!--
-The explanations under "MY-RRODUCT-NAME" are displayed  e.g. for the Connector A-Trust here: https://market.axonivy.com/a-trust#tab-description   
--->
-
-## Demo
-
-YOUR DEMO DESCRIPTION GOES HERE
-
-<!--
-We use all entries under the heading "Demo" for the demo-Tab on our Website, e.g. for the Connector A-Trust here: https://market.axonivy.com/a-trust#tab-demo  
--->
+### Key Features
+- **Effortless license setup** – Load and configure the Aspose license via the `CellFactory` with minimal overhead.
+- **Reusable components** – Predefined runnable and consumable methods accelerate development and ensure consistency.
+- **Lightweight and extendable** – Small footprint, easy to install, integrate, and adapt to your project’s needs.
 
 ## Setup
+Make sure the Aspose license is loaded through the `CellFactory` class before processing any document.
 
-YOUR SETUP DESCRIPTION GOES HERE
-<!--
-The entries under the heading "Setup" are filled in this tab, e.g. for the Connector A-Trust here: https://market.axonivy.com/a-trust#tab-setup. 
--->
-
-```
-@variables.yaml@
-```
+![load license](images/load-license.png)
