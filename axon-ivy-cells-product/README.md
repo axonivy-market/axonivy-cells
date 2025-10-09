@@ -4,11 +4,15 @@
 **Axon Ivy Cells** is a lightweight utility that simplifies SpreadSheet processing tasks inside the Axon Ivy Platform. It builds on the embedded Aspose.Cells Java library and provides ready-to-use building blocks for common SpreadSheet operations.
 
 ### Key Features
-- **Effortless license setup** – Load and configure the Aspose license via the `CellFactory` with minimal overhead.
+- **Automatic license management** – The `CellFactory` automatically handles Aspose license initialization and ensures proper licensing for all operations.
+- **Mandatory factory pattern** – All spreadsheet operations must go through `CellFactory` to guarantee license compliance and optimal performance.
 - **Reusable components** – Predefined runnable and consumable methods accelerate development and ensure consistency.
-- **Lightweight and extendable** – Small footprint, easy to install, integrate, and adapt to your project’s needs.
+- **Lightweight and extendable** – Small footprint, easy to install, integrate, and adapt to your project's needs.
 
-## Setup
-Make sure the Aspose license is loaded through the `CellFactory` class before processing any document.
+## Important: Use CellFactory for All Operations
+**All spreadsheet operations must use the `CellFactory` class** to ensure proper Aspose license handling. Direct use of Aspose.Cells APIs without going through `CellFactory` may result in unlicensed operation (evaluation mode) with functional limitations.
 
-![load license](images/load-license.png)
+### License Management
+The `CellFactory` automatically handles Aspose.Cells licensing through Axon Ivy's third-party license service. No manual license configuration is required when using the factory methods.
+
+![CellFactory Class Diagram](images/cell-factory.png)
