@@ -68,7 +68,7 @@ public class CellFactory {
   }
 
   /**
-   * Executes a supplier function after ensuring the Aspose DocumentFactory
+   * Executes a supplier function after ensuring the Aspose CellFactory
    * license is loaded.
    * <p>
    * This method guarantees that the license is initialized before invoking the
