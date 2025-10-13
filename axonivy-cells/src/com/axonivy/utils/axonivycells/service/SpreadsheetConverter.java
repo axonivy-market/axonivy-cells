@@ -174,7 +174,9 @@ public class SpreadsheetConverter {
       // Ensure parent directories exist
       File parentDir = outputFile.getParentFile();
       if (parentDir != null && !parentDir.exists()) {
-        parentDir.mkdirs();
+        if (!parentDir.mkdirs() && !parentDir.exists()) {
+          throw new SpreadsheetConversionException("Failed to create parent directory: " + parentDir.getAbsolutePath());
+        }
       }
 
       workbook.save(outputPath, targetFormat);
