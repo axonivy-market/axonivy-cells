@@ -64,6 +64,9 @@ public class CellFactoryBean {
       });
 
       WorksheetCollection worksheets = workbook.getWorksheets();
+      if (workingSheetIndex < 0 || workingSheetIndex >= worksheets.getCount()) {
+        throw new WorkbookCreationException("Invalid worksheet index: " + workingSheetIndex + ". Valid range is 0 to " + (worksheets.getCount() - 1) + ".");
+      }
       Worksheet worksheet = worksheets.get(workingSheetIndex);
 
       if (StringUtils.isNotBlank(cellToUpdate)) {
