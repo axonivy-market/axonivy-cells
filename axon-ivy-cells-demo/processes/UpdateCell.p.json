@@ -2,17 +2,21 @@
   "$schema" : "https://json-schema.axonivy.com/process/13.1.2/process.json",
   "id" : "199C2D95E0A41E27",
   "config" : {
-    "data" : "com.axonivy.utils.axon.ivy.cells.demo.UpdateCellData"
+    "data" : "com.axonivy.utils.axonivycells.demo.UpdateCellData"
   },
   "elements" : [ {
       "id" : "f0",
       "type" : "RequestStart",
-      "name" : "start",
+      "name" : "updateCellAndConvertFile",
       "config" : {
-        "signature" : "start"
+        "signature" : "updateCellAndConvertFile",
+        "request" : {
+          "name" : "<%=ivy.cms.co(\"/Processes/UpdateCell/name\")%>"
+        }
       },
       "visual" : {
-        "at" : { "x" : 96, "y" : 64 }
+        "at" : { "x" : 96, "y" : 64 },
+        "labelOffset" : { "x" : 9, "y" : 49 }
       },
       "connect" : [
         { "id" : "f2", "to" : "f3" }
@@ -27,8 +31,9 @@
     }, {
       "id" : "f3",
       "type" : "DialogCall",
+      "name" : "Update Cell",
       "config" : {
-        "dialog" : "com.axonivy.utils.axon.ivy.cells.demo.UpdateCells:start()"
+        "dialog" : "com.axonivy.utils.axonivycells.demo.UpdateCells:start()"
       },
       "visual" : {
         "at" : { "x" : 224, "y" : 64 }

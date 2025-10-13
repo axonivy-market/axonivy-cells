@@ -8,8 +8,8 @@
     <version>13.1.1</version>
     <relativePath></relativePath>
   </parent>
-  <groupId>com.axonivy.connector.axon.ivy.cells</groupId>
-  <artifactId>axon-ivy-cells-demo</artifactId>
+  <groupId>com.axonivy.connector.axonivycells</groupId>
+  <artifactId>axonivy-cells-demo</artifactId>
   <version>13.1.1-SNAPSHOT</version>
   <packaging>iar</packaging>
   <properties>
@@ -17,8 +17,8 @@
   </properties>
   <dependencies>
     <dependency>
-      <groupId>com.axonivy.connector.axon.ivy.cells</groupId>
-      <artifactId>axon-ivy-cells</artifactId>
+      <groupId>com.axonivy.connector.axonivycells</groupId>
+      <artifactId>axonivy-cells</artifactId>
       <version>${project.version}</version>
       <type>iar</type>
     </dependency>

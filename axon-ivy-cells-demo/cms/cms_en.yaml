@@ -1,0 +1,18 @@
+Dialogs:
+  com:
+    axonivy:
+      utils:
+        axonivycells:
+          demo:
+            UpdateCells:
+              CellToUpdate: Cell To Update
+              ChooseFile: Choose .xls/.xlsx
+              ConvertAndDownload: Convert and Download
+              Header: 'Axon Ivy Cell Demo: Upload .xls(x) file to update and convert it to PDF'
+              NewCellValue: New Cell Value
+              Title: UpdateCells
+              UpdateConvertAndDownload: ''
+              WorkingSheetIndex: Working Sheet Index
+Processes:
+  UpdateCell:
+    name: Update cell & convert to pdf

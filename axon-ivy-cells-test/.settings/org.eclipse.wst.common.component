@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="axon-ivy-cells-test">
+        
+    <wb-module deploy-name="axonivy-cells-test">
+                
         <wb-resource deploy-path="/" source-path="/webContent" tag="defaultRootSource"/>
+                
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+                
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src_wsproc"/>
+                
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src_dataClasses"/>
-        <property name="context-root" value="axon-ivy-cells-test"/>
-        <property name="java-output-path" value="/axon-ivy-cells-test/target/classes"/>
+                
+        <property name="java-output-path" value="/axonivy-cells-test/target/classes"/>
+        <property name="context-root" value="axonivy-cells-test"/>
+            
     </wb-module>
+    
 </project-modules>
