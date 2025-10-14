@@ -8,7 +8,7 @@
     <version>13.1.1</version>
     <relativePath />
   </parent>
-  <groupId>com.axonivy.connector.axonivycells</groupId>
+  <groupId>com.axonivy.utils.axonivycells</groupId>
   <artifactId>axonivy-cells</artifactId>
   <version>13.1.1-SNAPSHOT</version>
   <packaging>iar</packaging>
