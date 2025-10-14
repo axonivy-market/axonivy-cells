@@ -18,12 +18,15 @@ The `CellFactory` automatically handles Aspose.Cells licensing through Axon Ivy'
 ![CellFactory Class Diagram](images/cell-factory.png)
 
 ## Demo
-### Convert XLSX → PDF and update cells & charts
-This demo demonstrates typical workflows supported by Axon Ivy Cells:
+### Update cells & charts % convert XLSX → PDF
+This demo demonstrates typical workflows supported by Axon Ivy Cells: Update XLSX cells and charts, then export to PDF.
 
-- Upload an XLSX workbook and export it to PDF.
-![Convert Document](images/convert-document.png)
-- Upload an XLSX workbook that contains charts and formula-driven cells, programmatically update cell values and chart data, and export the updated workbook to PDF.
+- Upload a normal XLSX file with charts and formula-driven cells.
+
+![XLSX file](images/xlsx.png)
+
+- Edit the XLSX file by changing cell values that are referenced by formulas and charts, refresh the charts, and export the updated XLSX file to PDF.
+
 ![Updated Cell](images/updated-cell.png)
 
 
