@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<h:body>
+	<ui:composition template="/layouts/frame-10-full-width.xhtml">
+		<ui:define name="title">#{ivy.cms.co('/Dialogs/com/axonivy/utils/axonivycells/demo/UpdateCells/CellToUpdate')}</ui:define>
+		<ui:define name="content">
+			<h3>#{ivy.cms.co('/Dialogs/com/axonivy/utils/axonivycells/demo/UpdateCells/Header')}</h3>
+			<br />
+			<h:form id="form" enctype="multipart/form-data">
+				<p:fileUpload value="#{cellFactoryBean.uploadedFile}"
+					allowTypes="/(\.|\/)(xlsx|xls)$/"
+					skinSimple="true" mode="simple"
+					label="#{ivy.cms.co('/Dialogs/com/axonivy/utils/axonivycells/demo/UpdateCells/ChooseFile')}" />
+				<h:panelGrid columns="2">
+					<p:outputLabel for="@next"
+						value="#{ivy.cms.co('/Dialogs/com/axonivy/utils/axonivycells/demo/UpdateCells/CellToUpdate')}"
+						styleClass="col-4" />
+					<p:inputText value="#{cellFactoryBean.cellToUpdate}" />
+					<p:outputLabel for="@next"
+						value="#{ivy.cms.co('/Dialogs/com/axonivy/utils/axonivycells/demo/UpdateCells/NewCellValue')}"
+						styleClass="col-4" />
+					<p:inputNumber value="#{cellFactoryBean.newCellValue}" />
+					<p:outputLabel for="@next"
+						value="#{ivy.cms.co('/Dialogs/com/axonivy/utils/axonivycells/demo/UpdateCells/WorkingSheetIndex')}"
+						styleClass="col-4" />
+					<p:inputNumber value="#{cellFactoryBean.workingSheetIndex}" />
+				</h:panelGrid>
+				<br />
+				<p:commandButton
+					value="#{ivy.cms.co('/Dialogs/com/axonivy/utils/axonivycells/demo/UpdateCells/ConvertAndDownload')}"
+					actionListener="#{cellFactoryBean.convert}" ajax="false"
+					icon="pi pi-download">
+					<p:fileDownload value="#{cellFactoryBean.convertedFile}" />
+				</p:commandButton>
+				<p:commandButton
+					value="#{ivy.cms.co('/Dialogs/com/axonivy/utils/axonivycells/demo/UpdateCells/UpdateConvertAndDownload')}"
+					actionListener="#{cellFactoryBean.updateWorkbook}" ajax="false"
+					icon="pi pi-download">
+					<p:fileDownload value="#{cellFactoryBean.convertedFile}" />
+				</p:commandButton>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
