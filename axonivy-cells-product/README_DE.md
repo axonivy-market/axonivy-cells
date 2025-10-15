@@ -1,7 +1,7 @@
 # Axon Ivy Cells
 *(formerly Docfactory Cells)*
 
-**Axon Ivy Cells** is a lightweight utility that simplifies SpreadSheet processing tasks inside the Axon Ivy Platform. It builds on the embedded Aspose.Cells Java library and provides ready-to-use building blocks for common SpreadSheet operations.
+**Axon Ivy Cells** is a lightweight utility that simplifies spreadsheet processing tasks inside the Axon Ivy Platform. It builds on the embedded Aspose.Cells Java library and provides ready-to-use building blocks for common spreadsheet operations.
 
 ### Key Features
 - **Automatic license management** – The `CellFactory` automatically handles Aspose license initialization and ensures proper licensing for all operations.
