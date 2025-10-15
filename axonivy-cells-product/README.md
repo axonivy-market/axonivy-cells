@@ -28,5 +28,3 @@ This demo demonstrates typical workflows supported by Axon Ivy Cells: Update XLS
 - Edit the XLSX file by changing cell values that are referenced by formulas and charts, refresh the charts, and export the updated XLSX file to PDF.
 
 ![Updated Cell](images/updated-cell.png)
-
-
