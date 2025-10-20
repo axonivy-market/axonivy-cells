@@ -16,8 +16,8 @@ import org.mockito.Mockito;
 import com.aspose.cells.SaveFormat;
 import com.aspose.cells.Workbook;
 import com.axonivy.utils.axonivycells.service.CellFactory;
-import com.axonivy.utils.axonivycells.service.SpreadsheetConversionException;
 import com.axonivy.utils.axonivycells.service.SpreadsheetConverter;
+import com.axonivy.utils.docs.common.DocumentConversionException;
 
 import ch.ivyteam.ivy.environment.IvyTest;
 
@@ -107,7 +107,7 @@ public class SpreadsheetConverterTest {
   void testConvertFromInvalidInputStreamThrowsException() throws Exception {
     withMockedDocumentFailure(() -> {
       InputStream inputStream = new ByteArrayInputStream("invalid content".getBytes());
-      assertThrows(SpreadsheetConversionException.class, () -> {
+      assertThrows(DocumentConversionException.class, () -> {
         CellFactory.convert().from(inputStream).toPdf().asBytes();
       });
     });
@@ -117,7 +117,7 @@ public class SpreadsheetConverterTest {
   void testConvertFromInvalidFileThrowsException() throws Exception {
     withMockedDocumentFailure(() -> {
       File invalidFile = new File("nonexistent.xlsx");
-      assertThrows(SpreadsheetConversionException.class, () -> {
+      assertThrows(DocumentConversionException.class, () -> {
         CellFactory.convert().from(invalidFile).toPdf().asBytes();
       });
     });
