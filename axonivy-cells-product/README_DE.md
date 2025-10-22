@@ -1,18 +1,18 @@
 # Axon Ivy Cells
-*(formerly Docfactory Cells)*
+*(ehemals Docfactory)*
 
-**Axon Ivy Cells** is a lightweight utility that simplifies spreadsheet processing tasks inside the Axon Ivy Platform. It builds on the embedded Aspose.Cells Java library and provides ready-to-use building blocks for common spreadsheet operations.
+**Axon Ivy Cells** ist ein leichtgewichtiges Dienstprogramm, das die Bearbeitung von Tabellenkalkulationen innerhalb der Axon Ivy-Plattform vereinfacht. Es baut auf der integrierten Java-Bibliothek Aspose.Cells auf und bietet gebrauchsfertige Bausteine für gängige Tabellenkalkulationsvorgänge.
 
-### Key Features
-- **Automatic license management** – The `CellFactory` automatically handles Aspose license initialization and ensures proper licensing for all operations.
-- **Mandatory factory pattern** – All spreadsheet operations must go through `CellFactory` to guarantee license compliance and optimal performance.
-- **Reusable components** – Predefined runnable and consumable methods accelerate development and ensure consistency.
-- **Lightweight and extendable** – Small footprint, easy to install, integrate, and adapt to your project's needs.
+### Hauptmerkmale
+- **Automatische Lizenzverwaltung** – Die `CellFactory` übernimmt automatisch die Initialisierung der Aspose-Lizenz und gewährleistet die ordnungsgemäße Lizenzierung für alle Vorgänge.
+- **Obligatorisches Factory-Muster** – Alle Tabellenkalkulationsvorgänge müssen über die `CellFactory` laufen, um die Einhaltung der Lizenzbedingungen und eine optimale Leistung zu gewährleisten.
+- **Wiederverwendbare Komponenten** – Vordefinierte ausführbare und verbrauchbare Methoden beschleunigen die Entwicklung und gewährleisten Konsistenz.
+- **Leichtgewichtig und erweiterbar** – Geringer Speicherbedarf, einfache Installation, Integration und Anpassung an die Anforderungen Ihres Projekts.
 
-## Important: Use CellFactory for All Operations
-**All spreadsheet operations must use the `CellFactory` class** to ensure proper Aspose license handling. Direct use of Aspose.Cells APIs without going through `CellFactory` may result in unlicensed operation (evaluation mode) with functional limitations.
+## Wichtig: Verwenden Sie CellFactory für alle Vorgänge
+**Alle Tabellenkalkulationsvorgänge müssen die Klasse `CellFactory` verwenden**, um eine ordnungsgemäße Handhabung der Aspose-Lizenz zu gewährleisten. Die direkte Verwendung der Aspose.Cells-APIs ohne Umweg über `CellFactory` kann zu einem nicht lizenzierten Betrieb (Evaluierungsmodus) mit funktionalen Einschränkungen führen.
 
-### License Management
-The `CellFactory` automatically handles Aspose.Cells licensing through Axon Ivy's third-party license service. No manual license configuration is required when using the factory methods.
+### Lizenzverwaltung
+Die `CellFactory` verwaltet die Lizenzen für Aspose.Cells automatisch über den Drittanbieter-Lizenzdienst von Axon Ivy. Bei Verwendung der Factory-Methoden ist keine manuelle Lizenzkonfiguration erforderlich.
 
 ![CellFactory Class Diagram](images/cell-factory.png)
