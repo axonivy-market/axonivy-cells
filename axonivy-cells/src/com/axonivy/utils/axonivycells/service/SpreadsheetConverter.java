@@ -1,106 +1,52 @@
 package com.axonivy.utils.axonivycells.service;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.InputStream;
 
 import com.aspose.cells.SaveFormat;
 import com.aspose.cells.Workbook;
-
-import ch.ivyteam.ivy.environment.Ivy;
+import com.axonivy.utils.docs.common.AbstractConverter;
 
 /**
  * Fluent API for spreadsheet conversion operations. Provides a chain of methods
  * to convert spreadsheets from one format to another.
  */
-public class SpreadsheetConverter {
-  private Workbook workbook;
-  private Integer targetFormat;
+public class SpreadsheetConverter extends AbstractConverter<SpreadsheetConverter, Workbook> {
 
   /**
    * Creates a new SpreadsheetConverter instance. Package-private constructor to
    * ensure creation only through ExcelFactory.
    */
   SpreadsheetConverter() {
+    super();
   }
 
-  /**
-   * Sets the source spreadsheet from an InputStream.
-   * 
-   * @param inputStream the input stream containing the spreadsheet data
-   * @return this converter instance for method chaining
-   * @throws SpreadsheetConversionException if spreadsheet loading fails
-   */
-  public SpreadsheetConverter from(InputStream inputStream) {
-    try {
-      this.workbook = new Workbook(inputStream);
-      return this;
-    } catch (Exception e) {
-      Ivy.log().error("Failed to load spreadsheet from InputStream", e);
-      throw new SpreadsheetConversionException("Failed to load spreadsheet", e);
-    }
+  @Override
+  protected Workbook loadFromInputStream(InputStream inputStream) throws Exception {
+    return new Workbook(inputStream);
   }
 
-  /**
-   * Sets the source spreadsheet from a File.
-   * 
-   * @param file the file containing the spreadsheet
-   * @return this converter instance for method chaining
-   * @throws SpreadsheetConversionException if spreadsheet loading fails
-   */
-  public SpreadsheetConverter from(File file) {
-    try {
-      this.workbook = new Workbook(file.getAbsolutePath());
-      return this;
-    } catch (Exception e) {
-      Ivy.log().error("Failed to load spreadsheet from file: " + file.getAbsolutePath(), e);
-      throw new SpreadsheetConversionException("Failed to load spreadsheet from file", e);
-    }
+  @Override
+  protected Workbook loadFromFile(String filePath) throws Exception {
+    return new Workbook(filePath);
   }
 
-  /**
-   * Sets the source spreadsheet from a file path.
-   * 
-   * @param filePath the path to the file containing the spreadsheet
-   * @return this converter instance for method chaining
-   * @throws SpreadsheetConversionException if spreadsheet loading fails
-   */
-  public SpreadsheetConverter from(String filePath) {
-    try {
-      this.workbook = new Workbook(filePath);
-      return this;
-    } catch (Exception e) {
-      Ivy.log().error("Failed to load spreadsheet from path: " + filePath, e);
-      throw new SpreadsheetConversionException("Failed to load spreadsheet from path", e);
-    }
+  @Override
+  protected void saveToStream(Workbook document, ByteArrayOutputStream outputStream, int format) throws Exception {
+    document.save(outputStream, format);
   }
 
-  /**
-   * Sets the source spreadsheet from a byte array.
-   * 
-   * @param bytes the byte array containing the spreadsheet data
-   * @return this converter instance for method chaining
-   * @throws SpreadsheetConversionException if spreadsheet loading fails
-   */
-  public SpreadsheetConverter from(byte[] bytes) {
-    try {
-      this.workbook = new Workbook(new ByteArrayInputStream(bytes));
-      return this;
-    } catch (Exception e) {
-      Ivy.log().error("Failed to load spreadsheet from byte array", e);
-      throw new SpreadsheetConversionException("Failed to load spreadsheet from byte array", e);
-    }
+  @Override
+  protected void saveToFile(Workbook document, String outputPath, int format) throws Exception {
+    document.save(outputPath, format);
   }
 
-  /**
-   * Converts the spreadsheet to PDF format.
-   * 
-   * @return this converter instance for method chaining
-   */
-  public SpreadsheetConverter toPdf() {
-    return to(SaveFormat.PDF);
+  @Override
+  protected int getPdfFormat() {
+    return SaveFormat.PDF;
   }
+
+  // Additional convenience methods specific to spreadsheets
 
   /**
    * Converts the spreadsheet to XLSX format.
@@ -130,98 +76,20 @@ public class SpreadsheetConverter {
   }
 
   /**
-   * Converts the spreadsheet to the specified format.
+   * Converts the spreadsheet to HTML format.
    * 
-   * @param format the target format
    * @return this converter instance for method chaining
    */
-  public SpreadsheetConverter to(int format) {
-    if (workbook == null) {
-      throw new IllegalStateException("No source spreadsheet set. Call from() method first.");
-    }
-    this.targetFormat = format;
-    return this;
+  public SpreadsheetConverter toHtml() {
+    return to(SaveFormat.HTML);
   }
 
   /**
-   * Converts the spreadsheet and returns the result as a byte array.
+   * Converts the spreadsheet to ODS format.
    * 
-   * @return the converted spreadsheet as byte array
-   * @throws SpreadsheetConversionException if conversion fails
+   * @return this converter instance for method chaining
    */
-  public byte[] asBytes() {
-    validateConversionReady();
-    try (ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
-      workbook.save(outputStream, targetFormat);
-      return outputStream.toByteArray();
-    } catch (Exception e) {
-      Ivy.log().error("Failed to convert spreadsheet", e);
-      throw new SpreadsheetConversionException("Failed to convert spreadsheet", e);
-    }
-  }
-
-  /**
-   * Converts the spreadsheet and saves it as a file.
-   * 
-   * @param outputPath the path where the converted file should be saved
-   * @return the File object representing the saved file
-   * @throws SpreadsheetConversionException if conversion or file saving fails
-   */
-  public File asFile(String outputPath) {
-    validateConversionReady();
-    try {
-      File outputFile = new File(outputPath);
-      // Ensure parent directories exist
-      File parentDir = outputFile.getParentFile();
-      if (parentDir != null && !parentDir.exists()) {
-        if (!parentDir.mkdirs() && !parentDir.exists()) {
-          throw new SpreadsheetConversionException("Failed to create parent directory: " + parentDir.getAbsolutePath());
-        }
-      }
-
-      workbook.save(outputPath, targetFormat);
-      return outputFile;
-    } catch (Exception e) {
-      Ivy.log().error("Failed to save converted spreadsheet to: " + outputPath, e);
-      throw new SpreadsheetConversionException("Failed to save converted spreadsheet", e);
-    }
-  }
-
-  /**
-   * Converts the spreadsheet and saves it as a file.
-   * 
-   * @param outputFile the File object where the converted spreadsheet should be
-   *                   saved
-   * @return the File object representing the saved file
-   * @throws SpreadsheetConversionException if conversion or file saving fails
-   */
-  public File asFile(File outputFile) {
-    return asFile(outputFile.getAbsolutePath());
-  }
-
-  /**
-   * Converts the spreadsheet and returns it as an InputStream. Note: The caller
-   * is responsible for closing the returned InputStream.
-   * 
-   * @return an InputStream containing the converted spreadsheet data
-   * @throws SpreadsheetConversionException if conversion fails
-   */
-  public InputStream asInputStream() {
-    byte[] bytes = asBytes();
-    return new ByteArrayInputStream(bytes);
-  }
-
-  /**
-   * Validates that the converter is ready for conversion.
-   * 
-   * @throws IllegalStateException if workbook or target format is not set
-   */
-  private void validateConversionReady() {
-    if (workbook == null) {
-      throw new IllegalStateException("No source spreadsheet set. Call from() method first.");
-    }
-    if (targetFormat == null) {
-      throw new IllegalStateException("No target format set. Call to() or toPdf() method first.");
-    }
+  public SpreadsheetConverter toOds() {
+    return to(SaveFormat.ODS);
   }
 }
