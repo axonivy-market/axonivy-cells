@@ -1,18 +1,47 @@
-# Axon Ivy Cells
-*(ehemals Docfactory)*
+# #Axon Efeu Zellen
+*(Einst Docfactory)*
 
-**Axon Ivy Cells** ist ein leichtgewichtiges Dienstprogramm, das die Bearbeitung von Tabellenkalkulationen innerhalb der Axon Ivy-Plattform vereinfacht. Es baut auf der integrierten Java-Bibliothek Aspose.Cells auf und bietet gebrauchsfertige Bausteine für gängige Tabellenkalkulationsvorgänge.
+**#Axon Efeu Zellen** sind ein leichtgewichtiger Nutzen jener vereinfacht
+Tabelle verarbeitend Tasks innerhalb den #Axon Efeu Bahnsteig. Es baut weiter
+das #eingraben Aspose.Zellen #Java Bibliothek und versieht bereit-zu-Nutzung
+bauend Blöcke für allgemein Tabelle Operationen.
 
-### Hauptmerkmale
-- **Automatische Lizenzverwaltung** – Die `CellFactory` übernimmt automatisch die Initialisierung der Aspose-Lizenz und gewährleistet die ordnungsgemäße Lizenzierung für alle Vorgänge.
-- **Obligatorisches Factory-Muster** – Alle Tabellenkalkulationsvorgänge müssen über die `CellFactory` laufen, um die Einhaltung der Lizenzbedingungen und eine optimale Leistung zu gewährleisten.
-- **Wiederverwendbare Komponenten** – Vordefinierte ausführbare und verbrauchbare Methoden beschleunigen die Entwicklung und gewährleisten Konsistenz.
-- **Leichtgewichtig und erweiterbar** – Geringer Speicherbedarf, einfache Installation, Integration und Anpassung an die Anforderungen Ihres Projekts.
+### Wesentliche Charakterzüge
+- **Automatisches Schein Management** – Das `CellFactory` automatisch Henkel
+  Aspose Schein #Initialisierung und sichert regelrechte Genehmigung für alle
+  Operationen.
+- **Obligatorisches Fabrik Muster** – Alle Tabelle Operationen müssen
+  aufbrauchen `CellFactory` zu garantieren Schein Zustimmung und optimale
+  Leistung.
+- **#Wiederverwendbar Komponenten** – #Vordefiniert runnable und consumable
+  Methoden beschleunigen Entwicklung und sichern Beschaffenheit.
+- **Leichtgewichtig und extendable** – Kleiner #Fußstapfen, leicht zu
+  installieren, integrier, und adaptieren zu eure ProjektsNotwendigkeiten.
 
-## Wichtig: Verwenden Sie CellFactory für alle Vorgänge
-**Alle Tabellenkalkulationsvorgänge müssen die Klasse `CellFactory` verwenden**, um eine ordnungsgemäße Handhabung der Aspose-Lizenz zu gewährleisten. Die direkte Verwendung der Aspose.Cells-APIs ohne Umweg über `CellFactory` kann zu einem nicht lizenzierten Betrieb (Evaluierungsmodus) mit funktionalen Einschränkungen führen.
+## Wichtig: Benutz CellFactory für Alle Operationen
+**Alle Tabelle Operationen müssen benutzen die `CellFactory` Klasse** zu sichern
+regelrecht Aspose Schein Handing. Direkte Nutzung von Aspose.Zellen APIs ohne
+#aufbrauchen `CellFactory` dürfen resultieren in #unbefugt Operation (Evaluation
+Verfahren) mit funktional Begrenzungen.
 
-### Lizenzverwaltung
-Die `CellFactory` verwaltet die Lizenzen für Aspose.Cells automatisch über den Drittanbieter-Lizenzdienst von Axon Ivy. Bei Verwendung der Factory-Methoden ist keine manuelle Lizenzkonfiguration erforderlich.
+### Schein Management
+Das `CellFactory` automatisch Henkel Aspose.Zellen lizenzieren durch #Axon Efeus
+#Dritter-Party Schein Bedienung. Kein manueller Schein Konfiguration ist bedürft
+#wann die Fabrik Methoden benutzend.
 
-![CellFactory Class Diagram](images/cell-factory.png)
+![CellFactory Klasse Diagramm](images/cell-factory.png)
+
+## Demo
+### Update Formel-#getrieben Zellen, Charts & umrechnen XLSX → #PDF
+Diese Demo demonstriert typisch workflows unterstützt bei #Axon Efeu Zellen:
+Verbesser XLSX Zellen und Charts, dann exportieren zu #PDF.
+
+- #Hochladen ein normales XLSX Datei mit Charts und Formel-#getrieben Zellen.
+
+![XLSX Datei](images/xlsx.png)
+
+- Bearbeite das XLSX Datei wechseln mal Zelle Werte jene sind #referenzieren bei
+  Formeln und Charts, erfrischt die Charts, und exportieren das #auf dem
+  Laufenden XLSX Datei zu #PDF.
+
+![#Auf dem Laufenden Zelle](images/updated-cell.png)
