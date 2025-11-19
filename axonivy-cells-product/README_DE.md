@@ -1,47 +1,51 @@
-# #Axon Efeu Zellen
-*(Einst Docfactory)*
+# Axon-Ivy-Zellen
+*(ehemals Docfactory)*
 
-**#Axon Efeu Zellen** sind ein leichtgewichtiger Nutzen jener vereinfacht
-Tabelle verarbeitend Tasks innerhalb den #Axon Efeu Bahnsteig. Es baut weiter
-das #eingraben Aspose.Zellen #Java Bibliothek und versieht bereit-zu-Nutzung
-bauend Blöcke für allgemein Tabelle Operationen.
+**Axon Ivy Cells** ist ein leichtgewichtiges Dienstprogramm, das die Bearbeitung
+von Tabellenkalkulationen innerhalb der Axon Ivy-Plattform vereinfacht. Es baut
+auf der eingebetteten Aspose.Cells Java-Bibliothek auf und bietet
+gebrauchsfertige Bausteine für gängige Tabellenkalkulationsoperationen.
 
-### Wesentliche Charakterzüge
-- **Automatisches Schein Management** – Das `CellFactory` automatisch Henkel
-  Aspose Schein #Initialisierung und sichert regelrechte Genehmigung für alle
-  Operationen.
-- **Obligatorisches Fabrik Muster** – Alle Tabelle Operationen müssen
-  aufbrauchen `CellFactory` zu garantieren Schein Zustimmung und optimale
-  Leistung.
-- **#Wiederverwendbar Komponenten** – #Vordefiniert runnable und consumable
-  Methoden beschleunigen Entwicklung und sichern Beschaffenheit.
-- **Leichtgewichtig und extendable** – Kleiner #Fußstapfen, leicht zu
-  installieren, integrier, und adaptieren zu eure ProjektsNotwendigkeiten.
+### Wichtigste Funktionen
+- **Automatische Lizenzverwaltung** – Die `CellFactory` übernimmt automatisch
+  die Initialisierung der Aspose-Lizenz und stellt die ordnungsgemäße
+  Lizenzierung für alle Vorgänge sicher.
+- **Obligatorisches Factory-Muster** – Alle Tabellenkalkulationsvorgänge müssen
+  über `CellFactory` erfolgen, um die Einhaltung der Lizenzbedingungen und eine
+  optimale Leistung zu gewährleisten.
+- **Wiederverwendbare Komponenten** – Vordefinierte ausführbare und nutzbare
+  Methoden beschleunigen die Entwicklung und gewährleisten Konsistenz.
+- **Leichtgewichtig und erweiterbar** – Geringer Speicherbedarf, einfach zu
+  installieren, zu integrieren und an die Anforderungen Ihres Projekts
+  anzupassen.
 
-## Wichtig: Benutz CellFactory für Alle Operationen
-**Alle Tabelle Operationen müssen benutzen die `CellFactory` Klasse** zu sichern
-regelrecht Aspose Schein Handing. Direkte Nutzung von Aspose.Zellen APIs ohne
-#aufbrauchen `CellFactory` dürfen resultieren in #unbefugt Operation (Evaluation
-Verfahren) mit funktional Begrenzungen.
+## Wichtig: Verwenden Sie CellFactory für alle Vorgänge.
+**Alle Tabellenkalkulationsvorgänge müssen die Klasse „CellFactory“** verwenden,
+um eine ordnungsgemäße Handhabung der Aspose-Lizenz zu gewährleisten. Die
+direkte Verwendung von Aspose.Cells-APIs ohne Umweg über `CellFactory` kann zu
+einem nicht lizenzierten Betrieb (Evaluierungsmodus) mit funktionalen
+Einschränkungen führen.
 
-### Schein Management
-Das `CellFactory` automatisch Henkel Aspose.Zellen lizenzieren durch #Axon Efeus
-#Dritter-Party Schein Bedienung. Kein manueller Schein Konfiguration ist bedürft
-#wann die Fabrik Methoden benutzend.
+### Lizenzverwaltung
+Die Zellfabrik „ `“` verwaltet die Lizenzierung von Aspose.Cells automatisch
+über den Drittanbieter-Lizenzdienst von Axon Ivy. Bei Verwendung der
+Factory-Methoden ist keine manuelle Lizenzkonfiguration erforderlich.
 
-![CellFactory Klasse Diagramm](images/cell-factory.png)
+![CellFactory-Klassendiagramm](images/cell-factory.png)
 
 ## Demo
-### Update Formel-#getrieben Zellen, Charts & umrechnen XLSX → #PDF
-Diese Demo demonstriert typisch workflows unterstützt bei #Axon Efeu Zellen:
-Verbesser XLSX Zellen und Charts, dann exportieren zu #PDF.
+### Aktualisieren Sie formelgesteuerte Zellen und Diagramme und konvertieren Sie XLSX → PDF.
+Diese Demo zeigt typische Arbeitsabläufe, die von Axon Ivy Cells unterstützt
+werden: Aktualisieren Sie XLSX-Zellen und Diagramme und exportieren Sie sie
+anschließend als PDF.
 
-- #Hochladen ein normales XLSX Datei mit Charts und Formel-#getrieben Zellen.
+- Hochladen Sie eine normale XLSX-Datei mit Diagrammen und formelgesteuerten
+  Zellen.
 
-![XLSX Datei](images/xlsx.png)
+![XLSX-Datei](images/xlsx.png)
 
-- Bearbeite das XLSX Datei wechseln mal Zelle Werte jene sind #referenzieren bei
-  Formeln und Charts, erfrischt die Charts, und exportieren das #auf dem
-  Laufenden XLSX Datei zu #PDF.
+- Bearbeiten Sie die XLSX-Datei, indem Sie die Zellwerte ändern, auf die Formeln
+  und Diagramme verweisen, aktualisieren Sie die Diagramme und exportieren Sie
+  die aktualisierte XLSX-Datei als PDF.
 
-![#Auf dem Laufenden Zelle](images/updated-cell.png)
+![Aktualisierte Zelle](images/updated-cell.png)
