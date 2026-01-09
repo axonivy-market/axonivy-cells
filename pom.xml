@@ -7,14 +7,14 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>${project.name}</module>
-    <module>${project.name}-demo</module>
-    <module>${project.name}-test</module>
-    <module>${project.name}-product</module>
+    <module>axonivy-cells</module>
+    <module>axonivy-cells-demo</module>
+    <module>axonivy-cells-test</module>
+    <module>axonivy-cells-product</module>
   </modules>
 
   <scm>
-    <developerConnection>scm:git:https://github.com/axonivy-market/${project.name}.git</developerConnection>
+    <developerConnection>scm:git:https://github.com/axonivy-market/axonivy-cells.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
