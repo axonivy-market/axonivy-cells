@@ -1,10 +1,11 @@
 package com.axonivy.utils.axonivycells.demo.managedbean;
 
+import java.io.Serializable;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 
 import org.apache.commons.lang3.StringUtils;
 import org.primefaces.model.DefaultStreamedContent;
@@ -20,9 +21,9 @@ import com.axonivy.utils.axonivycells.service.CellFactory;
 
 import ch.ivyteam.ivy.environment.Ivy;
 
-@ManagedBean
+@Named
 @ViewScoped
-public class CellFactoryBean {
+public class CellFactoryBean implements Serializable {
   private static final String PDF_EXTENSION = ".pdf";
   private static final String DOT = ".";
   private UploadedFile uploadedFile;
